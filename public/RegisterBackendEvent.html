@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Event Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap" rel="stylesheet">
+
+    <style>
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F2F2F2;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* START MENU BAR */
+.content {
+  padding: 0 20px;
+}
+
+header {
+  width: 100%;
+  background-color: #0d6efd;
+  display: inline-block;
+  width: 100%;
+}
+
+.logo {
+  color: #5FC0DC;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.toggler {
+  color: #5FC0DC;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #0d6efd;
+  width: 100%;
+  padding: 10px 20px;
+}
+
+/* START NAVIGATION */
+nav {
+  width: 100%;
+  display: none;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #F2F2F2;
+  font-size: 18px;
+  line-height: 40px;
+  transition: 0.3s ease-out;
+}
+
+nav ul li a:hover {
+  color: #5FC0DC;
+}
+
+.active {
+  color: #5FC0DC;
+}
+
+.side-nav {
+  text-align: center;
+}
+
+.side-nav a {
+  text-decoration: none;
+  color: #5FC0DC;
+  padding-right: 15px;
+  line-height: 40px;
+}
+
+/* END NAVIGATION */
+section {
+  margin-top: 500px;
+  text-align: center;
+  font-size: 10px;
+  color: #0d6efd;
+  margin-bottom: 20px;
+}
+
+section:after {
+  content: 'Jan/2018';
+  font-size: 12px;
+  font-weight: bold;
+}
+
+#info {
+  padding-top: 200px;
+  text-align: center;
+  color: #5FC0DC;
+}
+
+@media screen and (max-width: 871px) { 
+
+nav {
+  margin-top: 50px;
+
+}
+
+.main-container {
+ margin: 50px auto 0;
+}
+}
+
+
+@media screen and (min-width: 872px) {
+  
+  .content {
+    padding: 0 50px;
+  }
+  
+  .toggler {
+    display: none;
+  }
+  
+  nav {
+    display: inline-block !important; /* prevent the nav to hide when resize */
+    position: relative;
+    width: auto;
+    float: left !important ;
+    padding: 5px 0;
+  }
+ 
+  nav ul {
+    float: left;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    padding-right: 20px;
+  }
+}  
+
+
+button {
+            margin: 1.20312px 2px 6px;
+    background-color: #ebaf56;
+    align-items: center;
+    color: white;
+    padding: 8px 16px;
+    font-family:'Open Sans', sans-serif;
+    font-size: 14px;
+    border-radius: 4px;
+    border: none;
+}
+
+button:hover {
+    background-color: #c07606;
+    border-radius: 4px;
+}
+
+ body{
+  font-family: 'Open Sans', sans-serif;
+
+            background-color: #f4f4f4;
+            margin: 0;
+            margin-top: 0;
+            /* padding: 20px; */
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto 0;
+            background: #fff;
+            /* padding: 20px; */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding-right: 35px;
+            padding-left: 20px;
+            padding-top: 2px;
+            padding-bottom: 1px;
+        }
+
+        h2 {
+            
+            color:#7373b0;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            /* margin-bottom: 5px; */
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="datetime-local"] {
+            width: 100%;
+            padding: 5px;
+            font-size: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+input#eventstartDate{
+    padding: 4px;
+    border-radius: 8px;
+    
+}
+input#eventendDate{
+    padding: 4px;
+    border-radius: 8px;
+}
+input#startTime{
+    padding: 4px;
+    border-radius: 8px;
+}
+input#endTime{
+    padding: 4px;
+    border-radius: 8px;
+}
+
+/* Increase the font size and padding for text, email, and date/time inputs */
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="time"] {
+    width: 100%;
+    padding: 4px;
+    font-size: 18px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Adjust the size of select dropdown */
+
+
+select#eventtype {
+    padding: 4px;
+    font-size: 18px;
+    border-radius: 8px;
+    width: 100%;
+    border: 1px solid #ccc;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 500;
+    padding-bottom: 5px;
+}
+
+.date-time-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.date-time-group {
+    width: 48%; /* Adjust width to create space between date and time fields */
+}
+
+    </style>
+</head>
+<body> 
+    <header> 
+        <div class="content">
+          <div class="toggler"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></div>
+          <!-- Start Navigation -->
+          <nav>
+            <ul>
+                <li><a href="/dashboard.html">Dashboard</a></li>
+                <li><a href="/categorymanagement.html">Category Master</a></li>
+                <li><a href="/backendevents.html">Event Master</a></li>
+                <li><a href="/user-list.html">User Master</a></li>
+                <button class="logout-button" id="logoutButton">Logout</button>
+            
+              </ul>
+        </nav>
+        </div> 
+      </header>
+
+    <div class="container">
+        <h2>REGISTER NEW EVENT</h2>
+        <div id="eventForm">
+            
+    </div>
+    <div class="form-group">
+        <form action="/frontend-register-eventtypes" method="POST" onsubmit="return validateEventForm()">
+    <label for="eventname">Event Name:</label>
+    <input type="text" id="eventname" name="eventname" class="field">
+
+    <span id="eventnameError" style="color: red; display: none;">Please enter the event name.</span>
+</div>
+
+    <div class="form-group">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" class="field">
+    <span id="emailError" style="color: red; display: none;">Please enter a valid email address.</span>
+</div>
+
+    <div class="form-group">
+        <label for="eventtype">Event Type:</label>
+        <select id="eventtype" name="eventtype" class="field">
+            <option  id="eventtype" default value=""> Add category</option>
+            
+            <!-- Options will be dynamically populated here -->
+        </select>
+        <span id="eventtypeError" style="color: red; display: none;">Please enter a valid eventtype.</span>
+    </div>
+
+    
+    <div class="form-group">
+    <label for="fulladdress">Full Address:</label>
+    <input type="text" id="fulladdress" name="fulladdress" class="field">
+
+    <span id="fulladdressError" style="color: red; display: none;">Please enter fulladdress.</span>
+</div>
+
+
+
+    <!-- <span id="eventstatusError" style="color: red; display: none;">Please enter the event status.</span><br><br>
+    <div class="form-group">
+    <label for="eventstartDate">Event Start Date:</label>
+    <input type="date" id="eventstartDate" name="eventstartDate" class="field">
+
+  
+</div>
+    <div class="form-group">
+    <label for="eventendDate">Event End Date:</label>
+    <input type="date" id="eventendDate" name="eventendDate" class="field">
+
+</div> -->
+
+
+
+<div class="form-group">
+    <div class="date-time-container">
+        <div class="date-time-group">
+            <label for="eventstartDate">Event Start Date:</label>
+            <input type="date" id="eventstartDate" name="eventstartDate" class="field">
+            <span id="eventstartDateError" style="color: red; display: none;">Please select the event start date.</span>
+            <span id="eventstartDatepastError" style="color: red; display: none;">Please select the event start date from future.</span>
+            <span id="eventendDatewrongError" style="color: red; display: none;">Start Date cannot be after End Date</span>
+        </div>
+        <div class="date-time-group">
+            <label for="eventendDate">Event End Date:</label>
+            <input type="date" id="eventendDate" name="eventendDate" class="field">
+            
+    <span id="eventendDateError" style="color: red; display: none;">Please select the event end date.</span>
+    <span id="eventendDatepastError" style="color: red; display: none;">Please select the event end date from future.</span>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+    <!-- <div class="form-group">
+    <label for="startTime">Event Start Time:</label>
+    <input type="time" id="startTime" name="startTime" class="field">
+</div>
+
+    <div class="form-group">
+    <label for="endTime">Event End Time:</label>
+    <input type="time" id="endTime" name="endTime" class="field">
+    
+</div> -->
+
+
+
+<div class="form-group">
+    <div class="date-time-container">
+        <div class="date-time-group">
+            <label for="startTime">Event Start Time:</label>
+            <input type="time" id="startTime" name="startTime" class="field">
+    <span id="startTimeError" style="color: red; display: none;">Please select start time.</span><br>
+
+        </div>
+        <div class="date-time-group">
+            <label for="endTime">Event End Time:</label>
+            <input type="time" id="endTime" name="endTime" class="field">
+            <span id="endTimeError" style="color: red; display: none;">Please select end time.</span><br>
+    <span id="endTimeSmallerError" style="color: red; display: none;">Please Select End Time After the Start Time.</span>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+     <div class="form-group">
+        <input type="submit" value="Register Event" onclick="validateEventForm()">
+    </div>
+</div>
+        </div>
+
+
+        <script>
+
+
+const email = sessionStorage.getItem("adminEmail");
+    if (!email) {
+            // Redirect or hide the content, or perform other actions
+            window.location.href = '/user-login'; // Redirect to login page
+        }
+
+            function validateEventForm() {
+                let isValid = true;
+    
+                const eventName = document.getElementById('eventname');
+                const email = document.getElementById('email');
+                const eventtype = document.getElementById('eventtype')
+                const fulladdress = document.getElementById('fulladdress');
+                const startTime = document.getElementById('startTime');
+                const endTime = document.getElementById('endTime');
+                // const eventstartDate = document.getElementById('eventstartDate');
+                // const eventendDate = document.getElementById('eventendDate');
+    
+
+
+
+
+
+                const eventstartDate = document.getElementById('eventstartDate');
+            const today = new Date().toISOString().split('T')[0];
+            
+            // if (eventstartDate.value.trim() < today) {
+            //     isValid = false;
+            //     document.getElementById('eventstartDatepastError').style.display = 'block';
+                
+            // }
+
+            // Check if end date is in the past
+            const eventendDate = document.getElementById('eventendDate');
+            // if (eventendDate.value.trim() < today) {
+            //     isValid = false;
+            //     document.getElementById('eventendDatepastError').style.display = 'block';
+        
+            
+            // }
+
+            // Check if start date is after end date
+         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                if (eventName.value.trim() === '') {
+                    isValid = false;
+                    document.getElementById('eventnameError').style.display = 'block';
+                } else {
+                    document.getElementById('eventnameError').style.display = 'none';
+                }
+                if (email.value.trim() === '') {
+                isValid = false;
+                document.getElementById('emailError').style.display = 'block';
+            } else {
+                document.getElementById('emailError').style.display = 'none';
+            }
+            if (eventtype.value.trim() === '') {
+                isValid = false;
+                document.getElementById('eventtypeError').style.display = 'block';
+            } else {
+                document.getElementById('eventtypeError').style.display = 'none';
+            }
+            if (fulladdress.value.trim() === '') {
+                isValid = false;
+                document.getElementById('fulladdressError').style.display = 'block';
+            } else {
+                document.getElementById('fulladdressError').style.display = 'none';
+            }
+            if (startTime.value.trim() === '') {
+                isValid = false;
+                document.getElementById('startTimeError').style.display = 'block';
+            } else {
+                document.getElementById('startTimeError').style.display = 'none';
+            }
+            if (endTime.value.trim() === '') {
+                isValid = false;
+                document.getElementById('endTimeError').style.display = 'block';
+            } else {
+                document.getElementById('endTimeError').style.display = 'none';
+            }
+
+            
+            if (eventstartDate.value.trim() === '') {
+                    isValid = false;
+                    document.getElementById('eventstartDateError').style.display = 'block';
+                    document.getElementById('eventstartDatepastError').style.display = 'none'; // Hide other error messages
+                } else {
+                    document.getElementById('eventstartDateError').style.display = 'none';
+
+                    const selectedDate = new Date(eventstartDate.value.trim());
+                    const today = new Date();
+
+                    if (selectedDate < today) {
+                        isValid = false;
+                        document.getElementById('eventstartDateError').style.display = 'none';
+                        document.getElementById('eventstartDatepastError').style.display = 'block';
+                    } else {
+                        document.getElementById('eventstartDatepastError').style.display = 'none';
+                    }
+                }
+
+
+
+                                        if (eventendDate.value.trim() === '') {
+                            isValid = false;
+                            document.getElementById('eventendDateError').style.display = 'block';
+                            document.getElementById('eventendDatepastError').style.display = 'none'; // Hide other error messages related to endDate
+                        } else {
+                            document.getElementById('eventendDateError').style.display = 'none';
+
+                            const selectedEndDate = new Date(eventendDate.value.trim());
+                            const today = new Date();
+
+                            if (selectedEndDate < today) {
+                                isValid = false;
+                                document.getElementById('eventendDateError').style.display = 'none';
+                                document.getElementById('eventendDatepastError').style.display = 'block';
+                            } else {
+                                document.getElementById('eventendDatepastError').style.display = 'none';
+                            }
+
+                            const selectedStartDate = new Date(eventstartDate.value.trim());
+
+                            
+                            if(selectedStartDate === selectedEndDate &&  endTime <= startTime){
+                                isValid = false;
+                                document.getElementById('endTimeSmallerError').style.display = 'block';
+                                
+                            } else {
+                                document.getElementById('endTimeSmallerError').style.display = 'none';
+
+                            }
+
+                            if (selectedStartDate > selectedEndDate) {
+                                isValid = false;
+                                document.getElementById('eventendDatewrongError').style.display = 'block';
+                            } else {
+                                document.getElementById('eventendDatewrongError').style.display = 'none';
+                            }
+                        }
+
+
+
+                        
+
+
+
+
+
+                return isValid;
+
+            }
+
+
+
+
+
+
+            function logOutAdmin() {
+    const confirmed = confirm("Are you sure you want to logout?");
+    if (confirmed) {
+      fetch(`/admin-logout/${email}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      })
+      .then(response => {
+        if (response.ok) {
+          // Perform logout and redirect
+          sessionStorage.removeItem('adminEmail');
+
+          window.location.href = '/user-login';
+        } else {
+          alert('Logout failed. Please try again.');
+        }
+      })
+      .catch(error => {
+        alert('An error occurred during logout. Please try again.');
+      });
+    }
+  }
+
+  // Add click event listener to the logout button
+  const logoutButton = document.getElementById('logoutButton');
+  logoutButton.addEventListener('click', logOutAdmin);
+
+
+
+
+
+
+
+
+
+    
+            function fetchCategories() {
+                fetch('http://localhost:8000/getthecategory')
+                    .then(response => response.json())
+                    .then(categories => {
+                        const categorySelect = document.getElementById('eventtype');
+    
+                        categories.forEach(category => {
+                            const option = document.createElement('option');
+                            option.value = category.category;
+                            option.text = category.category;
+                            categorySelect.appendChild(option);
+                        });
+                    })
+
+
+
+
+
+                    
+                    .catch(error => console.error('Error fetching categories:', error));
+            }
+    
+            fetchCategories();
+        </script>
+        
+
+    </script>
+</script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://use.fontawesome.com/245137f78c.js"></script>
+<script type="text/javascript">
+$(function() {
+  $('.toggler').on('click', function() {
+    $('nav').slideToggle(500);
+  });
+});  
+</script>
+</body>
+</html>

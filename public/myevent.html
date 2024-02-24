@@ -1,0 +1,662 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event List</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap" rel="stylesheet">
+
+    <style>
+        
+
+
+        
+      
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F2F2F2;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* START MENU BAR */
+.content {
+  padding: 0 20px;
+}
+
+header {
+  width: 100%;
+  background-color: #0d6efd;
+  display: inline-block;
+  width: 100%;
+}
+
+.logo {
+  color: #5FC0DC;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.toggler {
+  color: #5FC0DC;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background:#0d6efd;
+  width: 100%;
+  padding: 10px 20px;
+}
+
+/* START NAVIGATION */
+nav {
+  width: 100%;
+  display: none;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #F2F2F2;
+  font-size: 18px;
+  line-height: 40px;
+  transition: 0.3s ease-out;
+}
+
+nav ul li a:hover {
+  color: #5FC0DC;
+}
+
+.active {
+  color: #5FC0DC;
+}
+
+.side-nav {
+  text-align: center;
+}
+
+.side-nav a {
+  text-decoration: none;
+  color: #5FC0DC;
+  padding-right: 15px;
+  line-height: 40px;
+}
+
+/* END NAVIGATION */
+section {
+  margin-top: 500px;
+  text-align: center;
+  font-size: 10px;
+  color: #2F2F2F;
+  margin-bottom: 20px;
+}
+
+section:after {
+  content: 'Jan/2018';
+  font-size: 12px;
+  font-weight: bold;
+}
+
+#info {
+  padding-top: 200px;
+  text-align: center;
+  color: #5FC0DC;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        body{
+  font-family: 'Open Sans', sans-serif;
+}
+        
+   .main-container {
+    margin: 0 auto;
+    max-width: 1440px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+.table-section {
+    overflow: auto;
+}    
+    
+
+
+
+        .user-details {
+            font-size: 16px;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f1f1f1;
+            padding: 10px;
+        }
+
+        .navbar-item {
+            font-weight: bold;
+            margin-right: 20px;
+        }
+
+        .events-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .events-table th,
+        .events-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        button {
+            margin: 1.20312px 2px 6px;
+    background-color: #ebaf56;
+    align-items: center;
+    color: white;
+    padding: 8px 16px;
+    font-family:'Open Sans', sans-serif;
+    font-size: 14px;
+    border-radius: 4px;
+    border: none;
+}
+
+
+button.accept-button {
+    margin: 1.20312px 2px 6px;
+    background-color: #4caf50;
+    align-items: center;
+    color: white;
+    padding: 8px 16px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    border-radius: 4px;
+    border: none;
+}
+
+button.accept-button:hover{
+    background-color: #289606;
+    border-radius: 4px;
+}
+button.decline-button {
+    margin: 1.20312px 2px 6px;
+    background-color: #ebaf56;
+    align-items: center;
+    color: white;
+    padding: 8px 16px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    border-radius: 4px;
+    border: none;
+}
+
+button.decline-button:hover{
+    background-color: #c07606;
+    border-radius: 4px;
+}
+
+button.delete-button {
+    margin: 1.20312px 2px 6px;
+    background-color: #ee655b;
+    align-items: center;
+    color: white;
+    padding: 8px 16px;
+    font-family:'Open Sans', sans-serif;
+    font-size: 14px;
+    border-radius: 4px;
+    border: none;
+}
+
+button.delete-button:hover{
+    background-color: #d31407;
+    border-radius: 4px;
+}
+
+
+
+
+
+
+button:hover {
+    background-color: #c07606;
+    border-radius: 4px;
+}
+
+
+        .events-table th {
+            /* background-color: #f1f1f1; */
+            background-color: lavender;
+        }
+
+        .buttondashboard{
+            display: inline-block;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  background-color: rgb(169, 231, 103);
+  color: white;
+  border: 2px solid rgb(135, 230, 34);
+  transition: background-color 0.3s ease;
+        }
+
+ 
+
+.buttondashboard:hover {
+  background-color:rgb(135, 230, 34);;
+  border-color:rgb(61, 99, 21);;
+}
+/* 
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #0353cc;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+element.style {
+    display: block;
+    position: inherit;
+    right: 147px;
+}
+li a:hover {
+  background-color: #084092;
+}
+.active
+{
+    background-color: #084092;
+} */
+
+
+p.Headingname {
+    text-align: center;
+    font-size: x-large;
+    color:#7373b0;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+        @media screen and (max-width: 871px) { 
+
+nav {
+  margin-top: 50px;
+
+}
+
+.main-container {
+ margin: 50px auto 0;
+}
+}
+
+@media screen and (min-width: 872px) {
+  
+  .content {
+    padding: 0 50px;
+  }
+  
+  .toggler {
+    display: none;
+  }
+  
+  nav {
+    display: inline-block !important; /* prevent the nav to hide when resize */
+    position: relative;
+    width: auto;
+    float: left !important ;
+    padding: 5px 0;
+  }
+ 
+  nav ul {
+    float: left;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    padding-right: 20px;
+  }
+}  
+
+
+
+    </style>
+
+</head>
+
+<div>
+
+<!-- To navigate(Link) to all the pages and the forms -->
+<header> 
+    <div class="content">
+      <div class="toggler"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></div>
+      <!-- Start Navigation -->
+      <nav>
+        <ul>
+            <li><a href="/dashboard.html">Dashboard</a></li>
+        
+            <li><a href="/categorymanagement.html">Category Master</a></li>
+
+            <li><a href="/backendevents.html">Event Master</a></li>
+            <li><a href="/user-list.html">User Master</a></li>
+            <button class="logout-button" id="logoutButton">Logout</button>
+        
+          </ul>
+    </nav>
+    </div> 
+  </header>
+
+<div class="main-container">
+    <div class="message-top">
+  <p class="Headingname" id="usernameHeading"></p>
+</div>
+<div class="table-section">
+    <table class="events-table" id="eventTable"></table>
+    </div>
+</div>
+    <script>
+
+function logOutAdmin() {
+    const confirmed = confirm("Are you sure you want to logout?");
+    if (confirmed) {
+      fetch(`/admin-logout/${email}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      })
+      .then(response => {
+        if (response.ok) {
+          // Perform logout and redirect
+          sessionStorage.removeItem('adminEmail');
+
+          window.location.href = '/user-login';
+        } else {
+          alert('Logout failed. Please try again.');
+        }
+      })
+      .catch(error => {
+        alert('An error occurred during logout. Please try again.');
+      });
+    }
+  }
+
+  // Add click event listener to the logout button
+  const logoutButton = document.getElementById('logoutButton');
+  logoutButton.addEventListener('click', logOutAdmin);
+
+function updateEventRequestAccept(id, status) {
+        // Confirmation alert before accepting the event
+        const confirmed = confirm('Are you sure you want to accept this request?');
+        if (confirmed) {
+            // Your API call to update the event request status goes here
+            // Example:
+            fetch(`http://localhost:8000/accept-event-request/${id}`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ request: status })
+            })
+            .then(response => {
+              
+                if (response.ok) {
+                  
+                    // fetchMyEventData(); // Refresh the table after updating the request status
+                    window.location.reload();  
+                    
+                    
+                } else {
+                    console.error('Failed to update event request');
+                }
+            })
+            .catch(error => console.error('Error updating event request:', error));
+        }
+    }
+
+    function updateEventRequestDecline(id, status) {
+        // Confirmation alert before declining the event
+        const confirmed = confirm('Are you sure you want to decline this request?');
+        if (confirmed) {
+            // Your API call to update the event request status goes here
+            // Example:
+            fetch(`http://localhost:8000/decline-event-request/${id}`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ request: status })
+            })
+            .then(response => {
+                if (response.ok) {
+                    // fetchMyEventData(); // Refresh the table after updating the request status
+                    window.location.reload();  
+                } else {
+                    console.error('Failed to update event request');
+                }
+            })
+            .catch(error => console.error('Error updating event request:', error));
+        }
+    }
+
+const email = sessionStorage.getItem("adminEmail");
+    if (!email) {
+            // Redirect or hide the content, or perform other actions
+            window.location.href = '/user-login'; // Redirect to login page
+        }
+
+        function deleteEvent(id) {
+            const confirmed = confirm('Are you sure you want to delete this event?');
+            if (confirmed) {
+                fetch(`http://localhost:8000/delete-user-event/${id}`, {
+                    method: 'DELETE'
+                })
+                .then(response => {
+                    if (response.ok) {
+                        // fetchMyEventData();
+                        window.location.reload();  
+                    } else {
+                        console.error('Failed to delete event');
+                    }
+                })
+                .catch(error => console.error('Error deleting event:', error));
+            }
+        }
+    
+        function fetchMyEventData() {
+    const path = window.location.pathname;
+    const Id = path.split('/').pop();
+
+    if (Id) {
+            fetch(`http://localhost:8000/getusername/${Id}`)
+                .then(response => response.json())
+                .then(data => {
+                    const usernameHeading = document.getElementById('usernameHeading');
+                    if (data && data.userName) {
+                        usernameHeading.textContent = data.userName.toUpperCase() + "'S EVENTS";
+                    } else {
+                        usernameHeading.textContent = "NO USER FOUND";
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    // Handle error or show a message if the API call fails
+                });
+        } else {
+            console.log("User ID not found in the URL");
+        }
+ 
+    if (Id) {
+        fetch(`http://localhost:8000/geteventsbyuserid/${Id}`)
+            .then(response => response.json())
+            
+            .then(eventTypes => {
+
+        
+                // Process eventData as needed
+                console.log('My Event Data:', eventTypes);
+   
+                    if (eventTypes && Array.isArray(eventTypes.myEvents) && eventTypes.myEvents.length > 0) {
+
+                        const excludedFields = ['_id', '__v', 'eventId', 'createdAt', 'updatedAt', 'email'];
+               
+                        function capitalizeFirstLetter(string) {
+
+                            return string.charAt(0).toUpperCase() + string.slice(1);
+                        }
+
+                        // Update the table header creation part of your code
+                        const tableHeader = document.createElement('thead');
+
+                        const headerRow = document.createElement('tr');
+
+                        for (const key in eventTypes.myEvents[0]) {
+
+                            if (!excludedFields.includes(key)) {
+                                const headerCell = document.createElement('th');
+                                headerCell.textContent = capitalizeFirstLetter(key); // Capitalize the first letter of the key
+                                headerRow.appendChild(headerCell);
+
+                            }
+                        }
+                        const actionsHeaderCell = document.createElement('th');
+                        actionsHeaderCell.textContent = 'Actions';
+                        headerRow.appendChild(actionsHeaderCell);
+                        tableHeader.appendChild(headerRow);
+                        eventTable.appendChild(tableHeader);
+
+                        const tableBody = document.createElement('tbody');
+                        eventTypes.myEvents.forEach(event => {
+             
+                            const row = document.createElement('tr');
+                            for (const key in event) {
+
+                                if (!excludedFields.includes(key)) {
+                                    const cell = document.createElement('td');
+                                    cell.textContent = event[key];
+                                    row.appendChild(cell);
+                            
+                                }
+                            }
+
+                            const actionsCell = document.createElement('td');
+            const statusButtons = document.createElement('div');
+            statusButtons.classList.add('status-buttons');
+
+            if (event.request === 'pending') {
+         
+
+                const yesButton = document.createElement('button');
+                yesButton.textContent = 'Accept';
+                yesButton.classList.add('accept-button'); // Add class for Accept button
+                yesButton.addEventListener('click', () => {
+                    updateEventRequestAccept(event._id, 'accepted');
+                });
+                statusButtons.appendChild(yesButton);
+
+                const noButton = document.createElement('button');
+                noButton.textContent = 'Decline';
+                noButton.addEventListener('click', () => {
+                    updateEventRequestDecline(event._id, 'declined');
+                });
+                statusButtons.appendChild(noButton);
+            } else if (event.request === 'accepted') {
+                const noButton = document.createElement('button');
+                noButton.textContent = 'Decline';
+                noButton.classList.add('decline-button'); // Add class for Decline button
+                noButton.addEventListener('click', () => {
+                    updateEventRequestDecline(event._id, 'declined');
+                });
+                statusButtons.appendChild(noButton);
+            } else if (event.request === 'declined') {
+                const yesButton = document.createElement('button');
+                yesButton.textContent = 'Accept';
+                yesButton.addEventListener('click', () => {
+                    updateEventRequestAccept(event._id, 'accepted');
+                });
+                statusButtons.appendChild(yesButton);
+            }
+
+            const deleteButton = document.createElement('button');
+            deleteButton.textContent = 'Delete';
+            deleteButton.classList.add('delete-button'); // Add class for Delete button
+            deleteButton.addEventListener('click', () => {
+                deleteEvent(event._id);
+            });
+            statusButtons.appendChild(deleteButton);
+
+            actionsCell.appendChild(statusButtons);
+            row.appendChild(actionsCell);
+
+            eventTable.appendChild(row);
+        });
+                } else {
+                    // console.error('Unexpected events data format or empty data:', eventTypes);
+                    window.alert('user hasnt registered any event ')
+                    window.location.href = '/user-list.html'; 
+     
+                }
+            })
+            .catch(error => console.error('Error:', error));
+    } else {
+        console.log("Event ID not found in the URL");
+    }
+}
+
+        window.onload = fetchMyEventData;
+    </script>
+       <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+       <script src="https://use.fontawesome.com/245137f78c.js"></script>
+       <script type="text/javascript">
+       $(function() {
+         $('.toggler').on('click', function() {
+           $('nav').slideToggle(500);
+         });
+       });  
+       </script>
+
+</body>
+</html>

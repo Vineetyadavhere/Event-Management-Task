@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html>
+<div>
+<title>Dashboard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap" rel="stylesheet">
+<style>
+
+/* .body{
+  background-color: #0353cc;
+} */
+body{
+  font-family: 'Open Sans', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+
+button {
+            margin: 1.20312px 2px 6px;
+    background-color: #ebaf56;
+    align-items: center;
+    color: white;
+    padding: 8px 16px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    border-radius: 4px;
+    border: none;
+}
+button:hover {
+    background-color: #c07606;
+    border-radius: 4px;
+}
+
+
+
+
+/* ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  /* background-color: #333; */
+  /* background-color: #0353cc; */
+  /* background-color: #0d6efd; */
+/* } */
+/* 
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+element.style {
+    display: block;
+    position: inherit;
+    right: 147px;
+} */
+/* li a:hover {
+  background-color: #084092;
+}
+.active{
+  background-color: #084092;
+} */
+.adduserform {
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+.form-container {
+  position: sticky;
+  display: none;
+  /* position: absolute; */
+  background-color: #f9f9f9;
+  width: 300px;
+  padding: 3px;
+  z-index: 1;
+}
+.form-containers {
+  
+  display: none;
+  /* position: absolute; */
+  background-color: #ebe4e4;
+  width: 300px;
+  padding: 20px;
+  
+
+  z-index: 1;
+}
+/* .field{
+  display: block;
+} */
+
+div#eventForm {
+    background-color: antiquewhite;
+}
+
+.addcategoryform {
+    float: right;
+    margin-right: 486px;
+}
+
+.welcome-message {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 24px;
+  color: #173cb8;
+  font-weight: bold;
+}
+
+.container {
+            width: 80%;
+            margin: 50px auto;
+            text-align: center;
+        }
+        .headline {
+	font-size: 28px;
+	color: #173cb8;
+	margin-bottom: 20px;
+	font-weight: 600;
+}
+
+        .subheadline {
+            font-size: 24px;
+            color: #786fec;
+            margin-bottom: 30px;
+        }
+
+        .description {
+	font-size: 18px;
+	color: #141b7e;
+	line-height: 1.6;
+	padding-bottom: 30px;
+}
+ .backend-event-box {
+    border: solid 1px #ccc;
+    padding: 15px;
+    border-radius: 5px;
+}       
+
+
+
+        .backend-event-box {
+    border: solid 1px #ccc;
+    padding: 15px;
+    border-radius: 5px;
+}    
+.count-box {
+    display: inline-block;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+    .info-box {
+	display: inline-block;
+	text-align: center;
+	margin: 0;
+	padding: 5px;
+	width: 25%;
+}
+.info-text {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #2828cc;
+    font-weight: 700;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F2F2F2;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* START MENU BAR */
+.content {
+  padding: 0 20px;
+}
+
+header {
+  width: 100%;
+  background-color: #0d6efd;
+  display: inline-block;
+  width: 100%;
+}
+
+.logo {
+  color: #5FC0DC;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.toggler {
+  color: #5FC0DC;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #0d6efd;
+  width: 100%;
+  padding: 10px 20px;
+}
+
+/* START NAVIGATION */
+nav {
+  width: 100%;
+  display: none;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #F2F2F2;
+  font-size: 18px;
+  line-height: 40px;
+  transition: 0.3s ease-out;
+}
+
+nav ul li a:hover {
+  color: #5FC0DC;
+}
+
+.active {
+  color: #5FC0DC;
+}
+
+.side-nav {
+  text-align: center;
+}
+
+.side-nav a {
+  text-decoration: none;
+  color: #5FC0DC;
+  padding-right: 15px;
+  line-height: 40px;
+}
+
+/* END NAVIGATION */
+section {
+  margin-top: 500px;
+  text-align: center;
+  font-size: 10px;
+  color: #0d6efd;
+  margin-bottom: 20px;
+}
+
+section:after {
+  content: 'Jan/2018';
+  font-size: 12px;
+  font-weight: bold;
+}
+
+#info {
+  padding-top: 200px;
+  text-align: center;
+  color: #5FC0DC;
+}
+
+@media screen and (max-width: 871px) { 
+
+nav {
+  margin-top: 50px;
+
+}
+.info-box {
+    width: 100%;
+  }
+.main-container {
+ margin: 50px auto 0;
+}
+}
+
+@media screen and (min-width: 872px) {
+
+
+  .content {
+    padding: 0 50px;
+  }
+  
+  .toggler {
+    display: none;
+  }
+  
+  nav {
+    display: inline-block !important; /* prevent the nav to hide when resize */
+    position: relative;
+    width: auto;
+    float: left !important ;
+    padding: 5px 0;
+  }
+ 
+  nav ul {
+    float: left;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    padding-right: 20px;
+  }
+}  
+</style>
+
+</style>
+
+<header> 
+  <div class="content">
+    <div class="toggler"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></div>
+    <!-- Start Navigation -->
+    <nav>
+      <ul>
+        <li class="active"><a href="dashboard.html">Dashboard</a></li>      
+        <li><a href="/categorymanagement.html">Category Master</a></li>   
+        <li><a href="/backendevents.html">Event Master</a></li>
+        <li><a href="/user-list.html">User Master</a></li>
+      
+          <button class="logout-button" id="logoutButton">Logout</button>
+         
+      </ul>
+  </nav>
+  </div> 
+</header>
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://use.fontawesome.com/245137f78c.js"></script>
+<script type="text/javascript">
+$(function() {
+  $('.toggler').on('click', function() {
+    $('nav').slideToggle(500);
+  });
+});  
+</script>
+
+
+
+
+
+
+
+
+
+<div class="welcome-message">
+  Welcome to the Event Management Website!
+</div>
+<div class="container">
+ 
+
+<div class="description">
+  <div class="info-box">
+    <div class="backend-event-box">
+    <div class="info-text">Backend Events</div>
+    <div class="count-box" id="backendEventsCountBox">0</div>
+  </div>
+  </div>
+
+  <div class="info-box">
+    <div class="backend-event-box">
+    <div class="info-text">Users</div>
+    <div class="count-box" id="UsersCountBox">0</div>
+  </div>
+  </div>
+  <div class="info-box">
+    <div class="backend-event-box">
+    <div class="info-text">Total Categories</div>
+    <div class="count-box" id="totalCategoriesCountBox">0</div>
+  </div>
+  </div>
+</div>
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+  // Get the email from sessionStorage
+  const email = sessionStorage.getItem("adminEmail");
+    if (!email) {
+            // Redirect or hide the content, or perform other actions
+            window.location.href = '/user-login'; // Redirect to login page
+        }
+  // Admin logout function
+  function logOutAdmin() {
+    const confirmed = confirm("Are you sure you want to logout?");
+    if (confirmed) {
+      fetch(`/admin-logout/${email}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      })
+      .then(response => {
+        if (response.ok) {
+          // Perform logout and redirect
+          sessionStorage.removeItem('adminEmail');
+
+          window.location.href = '/user-login';
+        } else {
+          alert('Logout failed. Please try again.');
+        }
+      })
+      .catch(error => {
+        alert('An error occurred during logout. Please try again.');
+      });
+    }
+  }
+
+  // Add click event listener to the logout button
+  const logoutButton = document.getElementById('logoutButton');
+  logoutButton.addEventListener('click', logOutAdmin);
+</script>
+
+
+  <script>
+    // Function to fetch counts for backend events
+    function fetchBackendEventCount() {
+      fetch('/count-backend-events')
+        .then(response => response.json())
+        .then(data => {
+          const backendEventsCount = data.count; // Assuming the response contains a 'count' property
+          // Update the count box
+          document.getElementById('backendEventsCountBox').textContent = backendEventsCount;
+        })
+        .catch(error => {
+          console.error('Error fetching backend events count:', error);
+        });
+    }
+
+    // Function to fetch counts for  users
+    function fetchUserCount() {
+      fetch('/count-super-user')
+        .then(response => response.json())
+        .then(data => {
+          const UsersCount = data.count; // Assuming the response contains a 'count' property
+          // Update the count box
+          document.getElementById('UsersCountBox').textContent = UsersCount;
+        })
+        .catch(error => {
+          console.error('Error fetching users count:', error);
+        });
+    }
+
+    // Function to fetch total categories count
+    function fetchTotalCategoriesCount() {
+      fetch('/count-total-categories')
+        .then(response => response.json())
+        .then(data => {
+          const totalCategoriesCount = data.count; // Assuming the response contains a 'count' property
+          // Update the count box
+          document.getElementById('totalCategoriesCountBox').textContent = totalCategoriesCount;
+        })
+        .catch(error => {
+          console.error('Error fetching total categories count:', error);
+        });
+    }
+
+    // Call the functions to fetch counts
+    fetchBackendEventCount();
+    fetchUserCount();
+    fetchTotalCategoriesCount();
+  </script>
+<script>
+  $(document).ready(function(){
+    $(".menu-icon").click(function(){
+      $("ul").toggleClass("main");
+    });
+  });
+  </script>
+
+</body>
+</html>

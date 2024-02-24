@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Backend Events</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap" rel="stylesheet">
+
+    <style>
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F2F2F2;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* START MENU BAR */
+.content {
+  padding: 0 20px;
+}
+
+header {
+  width: 100%;
+  background-color: #0d6efd;
+  display: inline-block;
+  width: 100%;
+}
+
+.logo {
+  color: #5FC0DC;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.toggler {
+  color: #5FC0DC;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #0d6efd;
+  width: 100%;
+  padding: 10px 20px;
+}
+
+/* START NAVIGATION */
+nav {
+  width: 100%;
+  display: none;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #F2F2F2;
+  font-size: 18px;
+  line-height: 40px;
+  transition: 0.3s ease-out;
+}
+
+nav ul li a:hover {
+  color: #5FC0DC;
+}
+
+.active {
+  color: #5FC0DC;
+}
+
+.side-nav {
+  text-align: center;
+}
+
+.side-nav a {
+  text-decoration: none;
+  color: #5FC0DC;
+  padding-right: 15px;
+  line-height: 40px;
+}
+
+/* END NAVIGATION */
+section {
+  margin-top: 500px;
+  text-align: center;
+  font-size: 10px;
+  color: #0d6efd;
+  margin-bottom: 20px;
+}
+
+section:after {
+  content: 'Jan/2018';
+  font-size: 12px;
+  font-weight: bold;
+}
+
+#info {
+  padding-top: 200px;
+  text-align: center;
+  color: #5FC0DC;
+}
+
+@media screen and (min-width: 872px) {
+  
+  .content {
+    padding: 0 50px;
+  }
+  
+  .toggler {
+    display: none;
+  }
+  
+  nav {
+    display: inline-block !important;
+    position: relative;
+    width: auto;
+    float: left !important ;
+    padding: 5px 0;
+  }
+ 
+  nav ul {
+    float: left;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    padding-right: 20px;
+  }
+}  
+
+
+
+body{
+  font-family: 'Open Sans', sans-serif;
+}
+
+.message-top {
+    display: inline-block;
+    width: 100%;
+}
+.main-container {
+    margin: 0 auto;
+    max-width: 1440px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+.table-section {
+    overflow: auto;
+}    
+     a{
+        text-decoration: none;
+        color: white;
+     }
+
+
+     button.new-event {
+    float: right;
+    /* margin-left: 1%; */
+    background-color: #ee655b;
+    border-radius: 4px;
+    border: none;
+    padding: 10px 10px;
+}
+
+
+        .user-details {
+            font-size: 16px;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f1f1f1;
+            padding: 10px;
+        }
+
+        .navbar-item {
+            font-weight: bold;
+            margin-right: 20px;
+        }
+
+        .events-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .events-table th,
+        .events-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+    
+        .events-table th {
+          
+            background-color: lavender;
+
+        }
+        .buttondashboard{
+            display: inline-block;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  background-color: rgb(169, 231, 103);
+  color: white;
+  border: 2px solid rgb(135, 230, 34);
+  transition: background-color 0.3s ease;
+        }
+     
+
+
+        button.button-delete{
+            margin: 1.20312px 2px 6px;
+    background-color: #ee655b;
+    align-items: center;
+    color: white;
+    padding: 8px 16px;
+    font-family:'Open Sans', sans-serif;
+    font-size: 14px;
+    border-radius: 4px;
+    border: none;
+        }
+
+        button.button-delete:hover {
+            background-color: #d31407;
+    border-radius: 4px;
+        }
+
+
+        button.button-update {
+            margin: 1.20312px 2px 6px;
+    background-color: #4caf50;
+    align-items: center;
+    color: white;
+    padding: 8px 16px;
+    font-family:'Open Sans', sans-serif;
+    font-size: 14px;
+    border-radius: 4px;
+    border: none;
+        }
+        button.button-update:hover {
+            background-color: #139c06;
+    border-radius: 4px;
+        }
+
+.buttondashboard:hover {
+  background-color:rgb(135, 230, 34);;
+  border-color:rgb(61, 99, 21);;
+}
+
+
+p.Headingname {
+    text-align: center;
+    font-size: x-large;
+    color:#7373b0;
+    font-weight: bold;
+}
+
+
+.menu-icon {
+	background: #084092;
+	padding: 10px;
+	box-sizing: border-box;
+	border-bottom: solid 1px #fff;
+}
+
+
+button {
+            margin: 1.20312px 2px 6px;
+    background-color: #ebaf56;
+    align-items: center;
+    color: white;
+    padding: 8px 16px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    border-radius: 4px;
+    border: none;
+}
+button:hover {
+    background-color: #c07606;
+    border-radius: 4px;
+}
+
+
+</style>
+</head>
+<body>
+    
+  <header> 
+    <div class="content">
+      <div class="toggler"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></div>
+      <!-- Start Navigation -->
+      <nav>
+        <ul>
+            <li><a href="/dashboard.html">Dashboard</a></li>
+        
+            <li><a href="/categorymanagement.html">Category Master</a></li>
+          
+            <li><a href="/backendevents.html">Event Master</a></li>
+            <li><a href="/user-list.html">User Master</a></li>
+          
+          
+            <button class="logout-button" id="logoutButton">Logout</button>
+        
+          </ul>
+    </nav>
+    </div> 
+  </header>
+
+
+
+
+
+
+<div class="main-container">
+
+<div class="message-top">
+  <p class="Headingname">ALL EVENTS LIST</p> 
+  <button class="new-event"><a class="new-event" href="/RegisterBackendEvent.html">Add Event</a></button>
+</div>
+
+<div class="table-section">
+    <table class="events-table" id="eventTable"></table>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+      $(".menu-icon").click(function(){
+        $("ul").toggleClass("main");
+      });
+    });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+    <script>
+         const email = sessionStorage.getItem("adminEmail");
+    if (!email) {
+            // Redirect or hide the content, or perform other actions
+            window.location.href = '/user-login'; // Redirect to login page
+        }
+        function deleteEvent(id) {
+    const confirmed = confirm('Are you sure you want to delete this event?');
+    if (confirmed) {
+        fetch(`http://localhost:8000/delete-event-backend/${id}`, {
+            method: 'DELETE'
+        })
+        .then(response => {
+            if (response.ok) {
+                fetchAndDisplayEvents();
+            } else if (response.status === 401) {
+                response.json().then(data => {
+                    if (data.error === "Event registered by user") {
+                        alert("This event is registered by a user and cannot be deleted.");
+                    } else {
+                        alert("You can't delete an event when user is enroll in the event");
+                        window.stop(); // Stops the loading of the page
+                    }
+                });
+            } else {
+                console.error('Failed to delete event');
+            }
+        })
+        .catch(error => console.error('Error deleting event:', error));
+    }
+}
+
+
+
+        function updateEvent(id) {
+            // Redirect to the update page for the specific event ID
+            window.location.href = `update-backend-event/${id}`;
+            console.log(`Editing event with ID: ${id}`);
+        }
+
+
+
+        function logOutAdmin() {
+    const confirmed = confirm("Are you sure you want to logout?");
+    if (confirmed) {
+      fetch(`/admin-logout/${email}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      })
+      .then(response => {
+        if (response.ok) {
+          // Perform logout and redirect
+          sessionStorage.removeItem('adminEmail');
+
+          window.location.href = '/user-login';
+        } else {
+          alert('Logout failed. Please try again.');
+        }
+      })
+      .catch(error => {
+        alert('An error occurred during logout. Please try again.');
+      });
+    }
+  }
+
+  // Add click event listener to the logout button
+  const logoutButton = document.getElementById('logoutButton');
+  logoutButton.addEventListener('click', logOutAdmin);
+
+
+
+
+////new code 
+function capitalizeFirstLetter(string) {
+            return string.charAt(0).toUpperCase() + string.slice(1);
+        }
+
+
+///////
+
+
+
+
+
+
+
+        function fetchAndDisplayEvents() {
+            fetch('http://localhost:8000/get-all-events-backend')
+                .then(response => response.json())
+                .then(eventData => {
+                    const eventTable = document.getElementById('eventTable');
+                    eventTable.innerHTML = ''; // Clear existing table content
+
+                    if (eventData && Array.isArray(eventData.allevents) && eventData.allevents.length > 0) {
+                        const excludedFields = ['_id', '__v']; // Fields to exclude from display
+
+                        const tableHeader = document.createElement('thead');
+            const headerRow = document.createElement('tr');
+            for (const key in eventData.allevents[0]) {
+                if (!excludedFields.includes(key)) {
+                    const headerCell = document.createElement('th');
+                    headerCell.textContent = capitalizeFirstLetter(key); // Capitalize the first letter of the key
+                    headerRow.appendChild(headerCell);
+                }
+            }
+                        const actionsHeaderCell = document.createElement('th');
+                        actionsHeaderCell.textContent = 'Actions';
+                        headerRow.appendChild(actionsHeaderCell);
+                        const updateHeaderCell = document.createElement('th'); // Add header for Update action
+                        updateHeaderCell.textContent = 'Action Update';
+                        headerRow.appendChild(updateHeaderCell);
+                        tableHeader.appendChild(headerRow);
+                        eventTable.appendChild(tableHeader);
+
+                        const tableBody = document.createElement('tbody');
+                        eventData.allevents.forEach(event => {
+                            const row = document.createElement('tr');
+                            for (const key in event) {
+                                if (!excludedFields.includes(key)) {
+                                    const cell = document.createElement('td');
+                                    cell.textContent = event[key];
+                                    row.appendChild(cell);
+                                }
+                            }
+
+                            const actionsCell = document.createElement('td');
+                            const deleteButton = document.createElement('button');
+                            deleteButton.textContent = 'Delete';
+                            deleteButton.classList.add('button-delete');
+                            deleteButton.addEventListener('click', () => {
+                                deleteEvent(event._id); // Pass the event ID to the delete function
+                            });
+                            actionsCell.appendChild(deleteButton);
+                            row.appendChild(actionsCell);
+
+                            const updateCell = document.createElement('td'); // Add cell for Update action
+                            const updateButton = document.createElement('button');
+                            updateButton.textContent = 'Update';
+                            updateButton.classList.add('button-update'); 
+                            updateButton.addEventListener('click', () => {
+                                updateEvent(event._id); // Pass the event ID to the update function
+                            });
+                            updateCell.appendChild(updateButton);
+                            row.appendChild(updateCell);
+
+                            tableBody.appendChild(row);
+                        });
+                        eventTable.appendChild(tableBody);
+                    } else {
+                        const noEventsRow = document.createElement('tr');
+                        const noEventsCell = document.createElement('td');
+                        noEventsCell.setAttribute('colspan', '3'); // Colspan to cover all columns
+                        noEventsCell.textContent = 'No events available';
+                        noEventsRow.appendChild(noEventsCell);
+                        eventTable.appendChild(noEventsRow);
+                    }
+                })
+                .catch(error => console.error('Error fetching events:', error));
+        }
+
+        window.onload = fetchAndDisplayEvents; // Fetch and display when window load
+    </script>
+
+
+
+<script>
+  $(document).ready(function(){
+    $(".menu-icon").click(function(){
+      $("ul").toggleClass("main");
+    });
+  });
+  </script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://use.fontawesome.com/245137f78c.js"></script>
+  <script type="text/javascript">
+  $(function() {
+    $('.toggler').on('click', function() {
+      $('nav').slideToggle(500);
+    });
+  });  
+  </script>
+
+
+
+</body>
+</html>
