@@ -2,7 +2,6 @@ const superuser = require('../../models/User')
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
-const UserService = require('../../services/UserService')
 const frontenduser = require('../../models/FrontendUser')
 const jwt = require('../../../config/common'); // Assuming you have a common.js file with JWT functionality
 const { jwtSign } = require ('../../../config/common')

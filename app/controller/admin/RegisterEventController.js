@@ -2,7 +2,6 @@ const user = require('../../models/User')
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
-const UserService = require('../../services/UserService')
 const eventtypes = require('../../models/Eventtypes')
 const createcategory = require('../../models/CreateCategory')
 const moment = require('moment'); // Import moment.js or any other date formatting library you prefer
