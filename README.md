@@ -1,5 +1,7 @@
 Event Management System
+
 Introduction
+
 Welcome to our Event Management System! This system is designed to simplify and streamline event management processes, allowing users to effortlessly create, update, and manage events and categories. Whether you are organizing conferences, workshops, or social gatherings, our system is tailored to meet your needs.
 
 Getting Started
